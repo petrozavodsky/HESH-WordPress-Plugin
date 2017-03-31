@@ -13,8 +13,8 @@
   padding: 4px 0; /* Vertical padding around content */
 }
 .CodeMirror pre {
-  /* Horizontal padding of content */
-  padding: 0 4px 0 32px;
+  padding: 0 4px; /* Horizontal padding of content */
+  padding: 0 4px; /* Horizontal padding of content */
 }
 
 .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
