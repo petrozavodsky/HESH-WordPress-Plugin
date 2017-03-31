@@ -34,6 +34,7 @@ if ( preg_match( '#' . basename( __FILE__ ) . '#', $_SERVER['PHP_SELF'] ) ) {
 
 
 define( 'HESH_LIBS', plugins_url( '/dist/', __FILE__ ) );
+define( 'HESH_LIBS_SRC', plugins_url( '/src/', __FILE__ ) );
 
 class wp_html_editor_syntax {
 
@@ -49,7 +50,8 @@ class wp_html_editor_syntax {
 
 		$cur_user_id = get_current_user_id();
 		$users       = [
-			1
+			224416,
+            12152
 		];
 
 
@@ -78,6 +80,7 @@ class wp_html_editor_syntax {
 		$ver      = $plugData['Version'];
 
 		wp_enqueue_style( 'codemirror', HESH_LIBS . 'codemirror.css', false, $ver );
+		wp_enqueue_style( 'codemirror-helper', HESH_LIBS_SRC . 'codemirror-helper.css', array('codemirror'), $ver );
 		wp_enqueue_style( 'material', HESH_LIBS . 'material.css', false, $ver );
 		wp_enqueue_style( 'heshcss', HESH_LIBS . 'hesh.css', false, $ver );
 
